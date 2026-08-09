@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buna Andra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sky" aria-hidden="true">
+    <div class="stars"></div>
+    <div id="fireflies"></div>
+  </div>
+
+  <main class="stage" id="stage">
+
+    <!-- SCENE 1 -->
+    <section class="scene is-active" data-scene="1">
+      <p class="eyebrow">...</p>
+      <h1 class="headline">Bună, Andra <span class="wave">👋</span></h1>
+      <p class="body-text">
+        Ce faci? Sper că te-ai distrat maxim weekend-ul ăsta<br>
+        cu fetele.
+      </p>
+      <button class="btn btn-primary" data-next="2">Continuă <span class="arrow">→</span></button>
+    </section>
+
+    <!-- SCENE 2 -->
+    <section class="scene" data-scene="2">
+      <p class="eyebrow">acum, serios</p>
+      <h1 class="headline">Weekend-ul s-a terminat...</h1>
+      <p class="body-text">
+        sper că ți-ai mai păstrat niste emoții<br>și pentru MINE.
+      </p>
+      <p class="question">Le-ai păstrat, nu-i asa? <span class="q-mark">🤔</span></p>
+      <p class="taunt" id="taunt" aria-live="polite">&nbsp;</p>
+
+      <div class="btn-row" id="btnRow">
+        <button class="btn btn-primary" id="btnDa">DA</button>
+        <button class="btn btn-ghost" id="btnNu">NU</button>
+      </div>
+    </section>
+
+    <!-- SCENE 3 -->
+    <section class="scene" data-scene="3">
+      <p class="eyebrow">apropo</p>
+      <h1 class="headline">Mai ții minte...</h1>
+      <p class="body-text">
+        ...că vorbeam noi de un picnic?
+      </p>
+
+      <div id="spellWrap">
+        <button class="btn btn-magic" id="btnSpell">
+          <span class="sparkle">✨</span> Abracadabra <span class="sparkle">✨</span>
+        </button>
+      </div>
+
+      <div class="blanket" id="blanket" hidden>
+        <p class="pick-label">Alege ziua noastră de picnic:</p>
+        <div class="days" id="days">
+          <button class="day-chip" data-day="Monday">Monday</button>
+          <button class="day-chip" data-day="Tuesday">Tuesday</button>
+          <button class="day-chip" data-day="Wednesday">Wednesday</button>
+        </div>
+      </div>
+
+      <div class="confirm" id="confirm" hidden>
+        <p class="confirm-text">Perfect 🧺<br><span id="chosenDay"></span>Bravo</p>
+        <p class="send-status" id="sendStatus">&nbsp;</p>
+        <button class="btn btn-link" id="btnRestart">Restart</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
